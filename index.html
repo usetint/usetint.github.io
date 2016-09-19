@@ -1,0 +1,22 @@
+---
+features:
+  - title: Freedom
+    icon_path:
+    description:
+---
+
+<h1>Tint</h1>
+
+<section>
+	<h1>Features</h1>
+
+	<ul>
+		{% for feature in page.features %}
+			<li>
+				{{ feature.title }}
+				<img src="{{ feature.icon_path }}" />
+				{{ feature.description }}
+			</li>
+		{% endfor %}
+	</ul>
+</section>
