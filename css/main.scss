@@ -43,9 +43,39 @@ $on-laptop:        800px;
     }
 }
 
-
+%unlist {
+	&, li {
+		list-style-type: none;
+		padding: 0;
+	}
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base"
 ;
+
+#features {
+	ul {
+		@extend %unlist;
+
+		li {
+			float: left;
+			width: 30%;
+			margin: 1.5%;
+			background: transparent no-repeat top center;
+			background-size: 90%;
+			padding-top: 30vw;
+
+			> a:last-of-type {
+				display: block;
+			}
+		}
+	}
+}
+
+body > footer {
+	clear: both;
+	font-size: 0.9em;
+	text-align: right;
+}

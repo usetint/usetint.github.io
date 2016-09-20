@@ -16,17 +16,16 @@ features:
 
 <h1>Tint</h1>
 
-<section>
+<section id="features">
 	<h1>Features</h1>
 
 	<ul>
 		{% for feature in page.features %}
-			<li>
-				{{ feature.title }}
-				<img src="{{ feature.icon_path }}" />
-				{{ feature.description }}
+			<li id="feature-{{ page.title | slugify | escape }}" style="background-image: url({{ feature.icon_path | escape }});">
+				<h1>{{ feature.title | escape }}</h1>
+				{{ feature.description | escape }}
 				{% if feature.read_more %}
-					<a href="{{ feature.read_more }}">Read more</a>
+					<a href="{{ feature.read_more | escape }}">Read more</a>
 				{% endif %}
 			</li>
 		{% endfor %}
