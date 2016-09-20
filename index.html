@@ -1,8 +1,17 @@
 ---
 features:
-  - title: Freedom
+  - title: Developer Friendly
     icon_path:
-    description:
+    description: Do your code and design in plain text files, using tools you already love.
+    read_more:
+  - title: Easy to Use
+    icon_path:
+    description: Simple CMS interface allows your clients to update content themselves, no matter what their needs.
+    read_more:
+  - title: Freedom
+    icon_path: images/AGPLv3.svg
+    description: You are always free to extend the platform, or even take your data elsewhere.  No lock-in, no "Enterprise Edition", no CLA.
+    read_more: /freedom
 ---
 
 <h1>Tint</h1>
@@ -16,6 +25,9 @@ features:
 				{{ feature.title }}
 				<img src="{{ feature.icon_path }}" />
 				{{ feature.description }}
+				{% if feature.read_more %}
+					<a href="{{ feature.read_more }}">Read more</a>
+				{% endif %}
 			</li>
 		{% endfor %}
 	</ul>
