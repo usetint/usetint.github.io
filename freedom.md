@@ -1,6 +1,7 @@
 ---
 title: Freedom
 ---
+# Freedom
 
 We see tint as much more than just a place where agencies can help their clients easily maintain a beautifully designed website.  Tint is a platform that can power anything that calls itself a website.  And so it is too big to limit this platform to our own imagination or business ambitions.
 
