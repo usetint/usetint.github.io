@@ -1,11 +1,9 @@
 <header>
-	<h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+	<h1>
+		<a href="{{ site.baseurl }}/">{% include logo.svg %}</a>
+	</h1>
 
 	<nav>
-			{% for my_page in site.pages %}
-				{% if my_page.title %}
-				<a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-				{% endif %}
-			{% endfor %}
+		{% include page_links.html %}
 	</nav>
 </header>
