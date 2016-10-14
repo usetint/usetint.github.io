@@ -3,48 +3,7 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Lato, sans-serif;
-$base-font-size:	 16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:		 30px;
-
-$text-color:			 #111;
-$background-color: #fdfdfd;
-$brand-color:			 #2a7ae2;
-
-$grey-color:			 #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:		 800px;
-
-$on-palm:					 600px;
-$on-laptop:				 800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//		 .wrapper {
-//				 padding-right: $spacing-unit / 2;
-//				 padding-left: $spacing-unit / 2;
-//		 }
-// }
-@mixin media-query($device) {
-		@media screen and (max-width: $device) {
-				@content;
-		}
-}
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import "mixins", "base", "fonts";
+@import "fonts", "variables", "mixins", "base";
 
 body > header {
 	align-items: center;
@@ -73,7 +32,6 @@ body > header {
 			border-width: 0.2rem 0;
 			display: inline-block;
 			color: #fff;
-			font-family: Lato, sans-serif;
 			font-size: 1rem;
 			font-weight: bold;
 			letter-spacing: 0.05em;
@@ -82,12 +40,13 @@ body > header {
 			padding: 0.3rem 0;
 			text-transform: uppercase;
 
-			$navcolors: #ff8006, #ffd100, #18c9e6, #c94294;
 
-			@for $i from 1 through length($navcolors) {
-				$color: nth($navcolors, $i);
+			$l: length($logo-colors);
 
-				&:nth-child(#{$i}) {
+			@for $i from 1 through $l {
+				$color: nth($logo-colors, $i);
+
+				&:nth-child(#{$l}n + #{$i}) {
 					border-bottom-color: $color;
 				}
 			}
