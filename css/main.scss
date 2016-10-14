@@ -46,6 +46,8 @@ $on-laptop:				 800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "mixins", "base", "fonts";
 
+$logo-colors: #ff8006, #ffd100, #18c9e6, #c94294;
+
 body > header {
 	align-items: center;
 	background: #181621;
@@ -82,12 +84,13 @@ body > header {
 			padding: 0.3rem 0;
 			text-transform: uppercase;
 
-			$navcolors: #ff8006, #ffd100, #18c9e6, #c94294;
 
-			@for $i from 1 through length($navcolors) {
-				$color: nth($navcolors, $i);
+			$l: length($logo-colors);
 
-				&:nth-child(#{$i}) {
+			@for $i from 1 through $l {
+				$color: nth($logo-colors, $i);
+
+				&:nth-child(#{$l}n + #{$i}) {
 					border-bottom-color: $color;
 				}
 			}
