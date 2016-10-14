@@ -1,0 +1,65 @@
+%unlist {
+	&, li {
+		list-style-type: none;
+		padding: 0;
+	}
+}
+
+%input-shadow {
+	box-shadow: 0 2px 0 rgba(#000, 0.06);
+}
+
+%input {
+	@extend %input-shadow;
+
+	border: none;
+	border-radius: 2px;
+	font-family: Lato, sans-serif;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+%button {
+	background: #ff9900;
+	border: none;
+	border-radius: 2px;
+	color: #fff;
+	font-family: Lato, sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0rem 1.5rem;
+}
+
+%joined-input {
+	input {
+		@extend %input;
+
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+		flex: 1;
+	}
+
+	button {
+		@extend %button;
+		@extend %input-shadow;
+
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+$breakpoints: (
+	small: 0,
+	medium: 640px,
+	large: 1024px,
+	xlarge: 1200px,
+	xxlarge: 1440px,
+) !default;
+
+@mixin at-least($size) {
+	@media (min-width: #{map-get($breakpoints, $size)}) {
+		@content;
+	}
+}

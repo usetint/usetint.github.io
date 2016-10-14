@@ -1,4 +1,21 @@
 <footer>
-	<a href="mailto:contact@usetint.com">Contact us</a>
-	<a href="https://github.com/usetint/tint">Source Code</a>
+	<section id="freedom">
+		{% include agplv3.svg %}
+		<p>Open source, freedom is a feature. If there's something tint doesn't do <a href="https://github.com/usetint/tint">feel free to contribute</a>.</p>
+	</section>
+	<nav>
+		<a href="{{ site.baseurl }}/">{% include logo.svg %}</a>
+		{% include page_links.html %}
+		<a href="mailto:contact@usetint.com">Contact us</a>
+		<a href="https://github.com/usetint/tint">Source Code</a>
+	</nav>
+	<section id="newsletter">
+		<form method="post" action="#">
+			<label>
+				<span>Sign up for our newsletter</span>
+				<input type="email" name="email" placeholder="email address" />
+				<button type="submit">Subscribe</button>
+			</label>
+		</form>
+	</section>
 </footer>

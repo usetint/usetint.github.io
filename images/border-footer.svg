@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="4px" viewBox="0 0 1024 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>colour bar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Marketing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Marketing-Page" transform="translate(0.000000, -1451.000000)">
+            <g id="colour-bar" transform="translate(0.000000, 1451.000000)">
+                <rect id="Rectangle-8" fill="#FF8006" x="0" y="0" width="253.984252" height="4"></rect>
+                <rect id="Rectangle-8-Copy" fill="#FFD100" x="253.984252" y="0" width="258.015748" height="4"></rect>
+                <polygon id="Rectangle-8-Copy-2" fill="#18C9E6" points="512 0 653.102362 0 653.102362 4 512 4"></polygon>
+                <polygon id="Rectangle-8-Copy-3" fill="#C94294" points="653.102362 0 890.96063 0 890.96063 4 653.102362 4"></polygon>
+                <polygon id="Rectangle-8-Copy-4" fill="#FF8006" points="886.929134 0 1024 0 1024 4 886.929134 4"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

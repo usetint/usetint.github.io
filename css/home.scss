@@ -1,0 +1,110 @@
+---
+---
+
+@import "mixins";
+
+#coming-soon {
+	background-color: #201d30;
+	background-image: url(/images/bg-cta.svg), url(/images/bg-home-header.svg);
+	background-position: 50% 100%, 50% 0;
+	background-repeat: no-repeat;
+	background-size: auto 20rem, cover;
+	padding: 5rem 2rem 25rem;
+
+	h1, p {
+		font-family: Lato, sans-serif;
+		text-align: center;
+	}
+
+	h1 {
+		color: #ffd300;
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	p {
+		color: #fff;
+		font-size: 1.25rem;
+		font-weight: lighter;
+	}
+
+	form {
+		display: flex;
+		justify-content: center;
+
+		input {
+			@extend %input;
+			margin-right: 1rem;
+			width: 16rem;
+		}
+
+		button {
+			@extend %button;
+		}
+	}
+}
+
+#features {
+	padding: 5rem 2rem;
+
+	header {
+		margin-bottom: 5rem;
+
+		h1,
+		p {
+			color: #636363;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 1.25rem;
+		}
+	}
+
+	ul {
+		@extend %unlist;
+		margin: 0 auto;
+		max-width: 50rem;
+
+		@include at-least(medium) {
+			display: flex;
+		}
+
+		li {
+			background: transparent no-repeat top center;
+			background-size: contain;
+			margin-bottom: 5rem;
+			text-align: center;
+
+			@include at-least(medium) {
+				flex: 1;
+				margin-bottom: 0;
+			}
+
+			img {
+				width: 12rem;
+				max-width: 100%;
+				margin-bottom: 2rem;
+			}
+
+			h1 {
+				font-size: 1.25rem;
+				font-weight: 700;
+			}
+
+			p {
+				color: #373737;
+				font-weight: 300;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 14rem;
+				text-align: left;
+			}
+		}
+	}
+}
+

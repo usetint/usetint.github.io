@@ -1,27 +1,46 @@
 ---
+cta:
+  heading: Tint is coming soon.
+  subheading_md: An open source **simple CMS** made for developers and clients.
+  email_placeholder: email address
+  submit_button: Submit
 features:
-  - title: Developer Friendly
-    icon_path:
-    description: Do your code and design in plain text files, using tools you already love.
-    read_more:
-  - title: Easy to Use
-    icon_path:
-    description: Simple CMS interface allows your clients to update content themselves, no matter what their needs.
-    read_more:
-  - title: Freedom
-    icon_path: images/AGPLv3.svg
-    description: You are always free to extend the platform, or even take your data elsewhere.  No lock-in, no "Enterprise Edition", no CLA.
-    read_more: /freedom
+  heading: Features
+  subheading_md: Tint can help you get websites off the ground.
+  list:
+    - title: For Developers
+      icon_path: /images/for-developers.svg
+      description: Do your code and design in plain text files, using tools you already love.
+      read_more:
+    - title: For Clients
+      icon_path: /images/for-clients.svg
+      description: Simple CMS interface allows your clients to update content themselves, no matter what their needs.
+      read_more:
 ---
 
+<link rel="stylesheet" href="{{ "/css/home.css" | prepend: site.baseurl }}" />
+
+<section id="coming-soon">
+	<h1>{{ page.cta.heading }}</h1>
+	<p>{{ page.cta.subheading_md | markdownify }}</p>
+	<form method="post" action="#">
+		<input type="email" name="email" placeholder="{{ page.cta.email_placeholder }}" />
+		<button type="submit">{{ page.cta.submit_button }}</button>
+	</form>
+</section>
+
 <section id="features">
-	<h1>Features</h1>
+	<header>
+		<h1>{{ page.features.heading }}</h1>
+		<p>{{ page.features.subheading_md | markdownify }}</p>
+	</header>
 
 	<ul>
-		{% for feature in page.features %}
-			<li id="feature-{{ page.title | slugify | escape }}" style="background-image: url({{ feature.icon_path | escape }});">
+		{% for feature in page.features.list %}
+			<li id="feature-{{ page.title | slugify | escape }}">
+				<img src="{{ feature.icon_path | prepend: site.baseurl }}" />
 				<h1>{{ feature.title | escape }}</h1>
-				{{ feature.description | escape }}
+				<p>{{ feature.description | escape }}</p>
 				{% if feature.read_more %}
 					<a href="{{ feature.read_more | escape }}">Read more</a>
 				{% endif %}
