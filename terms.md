@@ -1,5 +1,6 @@
 ---
 title: Terms of Use
+layout: page
 ---
 
 Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the https://usetint.com and https://app.usetint.com websites (the "Service") operated by Tint ("us", "we", or "our").

@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+layout: page
 ---
 
 Your privacy is important to us.
