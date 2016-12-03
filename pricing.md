@@ -32,6 +32,12 @@ layout: page
 			<td>Unlimited</td>
 		</tr>
 		<tr>
+			<th>TLS</th>
+			<td>Yes</td>
+			<td>Yes</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
 			<th>Custom Domain</th>
 			<td>No</td>
 			<td>Yes</td>
@@ -40,8 +46,8 @@ layout: page
 		<tr>
 			<th>Whitelabel</th>
 			<td>No</td>
-			<td>$5/site</td>
-			<td>$3/site</td>
+			<td>$5/site/month</td>
+			<td>$3/site/month</td>
 		</tr>
 		<tr>
 			<th>Build time</th>
@@ -54,6 +60,12 @@ layout: page
 			<td>No</td>
 			<td>No</td>
 			<td>Yes</td>
+		</tr>
+		<tr>
+			<th>Support</th>
+			<td>No</td>
+			<td>Email</td>
+			<td>Email &amp; Telephone</td>
 		</tr>
 	</tbody>
 </table>
