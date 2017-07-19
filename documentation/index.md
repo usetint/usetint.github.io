@@ -37,7 +37,7 @@ Text-based assets (such as CSS and JavaScript) are gzipped during deploy to save
 
 ## Configuration
 
-Tint tried as hard as possible to work with your site out of the box, however some sites need a little bit of extra customisation.  Creating a `.tint.yml` file in the root of your repository lets you customise certain behaviours of the backend.  A suggested `.tint.yml` file for Jekyll sites can be added if you don't have on already.
+Tint tries as hard as possible to work with your site out of the box, however some sites need a little bit of extra customisation.  Creating a `.tint.yml` file in the root of your repository lets you customise certain behaviours of the backend.  A suggested `.tint.yml` file for Jekyll sites can be added if you don't have one already.
 
 ### Hidden paths
 
