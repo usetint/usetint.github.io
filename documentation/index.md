@@ -65,6 +65,13 @@ If you want users to be able to select a file from a particular folder, specify 
       avatars: "photos/avatars/"
       layouts: !basenames "_layouts/"
 
+### Field type overrides
+
+Tint infers what controls to show based on values and key naming conventions (see Editing, below), but occasionally you want to manually specify what control to use:
+
+    types:
+      date: datetime
+
 ### Filename Frontmatter
 
 Sometimes you want to keep metadata about a file in its filename.  Tint can read this out, show the values in the editor, and update the filename accordingly if you configure this.  For a glob pattern you can specify the format of the filename as an array of pieces.  Each piece has either a `match` key with a regular expression or a `strptime` key with a date format.  Pieces that should be considered part of the metadata need to specify the metadata `key`.  Pieces that have no `key` must have a `match` regular expression that exactly matches a single string.
