@@ -37,6 +37,8 @@
 			width: 16rem;
 		}
 
+		label { display: none; }
+
 		button {
 			@extend %button;
 		}

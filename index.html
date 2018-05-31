@@ -25,6 +25,7 @@ features:
 	<p>{{ page.cta.subheading_md | markdownify }}</p>
 	<form method="post" action="https://usetint.com/cgi-bin/mailman/subscribe/announce">
 		<input type="email" name="email" placeholder="{{ page.cta.email_placeholder }}" />
+		<label>Leave blank: <input type="password" name="pw" /></label>
 		<button type="submit">{{ page.cta.submit_button }}</button>
 	</form>
 </section>
